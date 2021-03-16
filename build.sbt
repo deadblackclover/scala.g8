@@ -10,10 +10,15 @@ ThisBuild / semanticdbVersion := scalafixSemanticdb.revision
 lazy val root = (project in file("."))
   .settings(
     name := "example",
+    // Warn if an import selector is not referenced.
     scalacOptions += "-Wunused:imports",
     libraryDependencies += scalaTest % Test
   )
 
+// Run scalafmt on compile.
 scalafmtOnCompile := true
+
+// Run scalafix on compile.
+scalafixOnCompile := true
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
