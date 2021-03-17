@@ -6,6 +6,7 @@ ThisBuild / organization := "net.cipherdogs"
 ThisBuild / organizationName := "cipherdogs"
 ThisBuild / semanticdbEnabled := true
 ThisBuild / semanticdbVersion := scalafixSemanticdb.revision
+ThisBuild / scalafixScalaBinaryVersion := scalaBinaryVersion.value
 
 lazy val root = (project in file("."))
   .settings(
